@@ -1,34 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import {Header }from './componentes/Header/Header.jsx'
+import Login from './pages/Auth/Login/Login.jsx'
+import SignUp from './pages/Auth/Signup/Signup.jsx'
+import Home from "./pages/Home/Home.jsx";
+import Product from './pages/Product/Product.jsx'
+import Products from './pages/Products/Products.jsx'
+import Profile from './pages/Profile/Profile.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    
+      <div className='App'>
+        <BrowserRouter>
+        <Header></Header>
+        <Routes>
+        <Route path='/' element={ <Home></Home>}
+          ></Route>
+          <Route path='/home' element={ <Home></Home>}
+          ></Route>
+          <Route path='/products' element={ <Products></Products>}
+          ></Route>
+          <Route path='/produtcs/:id' element={ <Product></Product>}
+          ></Route>
+          <Route path='/auth/login' element={ <Login></Login>}
+          ></Route>
+          <Route path='/auth/signup' element={ <SignUp></SignUp>}
+          ></Route>
+          <Route path='/profile' element={ <Profile></Profile>}
+          ></Route>
+        </Routes>
+        </BrowserRouter>
+
+        
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      
   )
 }
 
