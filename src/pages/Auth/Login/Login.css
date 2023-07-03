@@ -1,0 +1,44 @@
+.form_container {
+    width: 30%;
+}
+
+@media  screen and (max-width:1000px) {
+    .form_container {
+        width: 45%;
+    }
+    
+}
+
+@media  screen and (max-width:700px) {
+    .form_container {
+        width: 65%;
+    }
+    
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+}
+
+.links a img {
+    max-height: 40px;
+    margin-inline: 10px;
+
+}
+
+.btn {
+    margin-block: 24px;
+    background-color: #f1047b;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.btn :hover{
+    background-color: #10449a;
+
+}

@@ -7,7 +7,7 @@ export const Header =()=> {
   return (
     <Navbar bg = "dark" expand="lg" variant= 'dark'>
       <Container fluid>
-    <Navbar.Brand href="/">Lo Mejor en Tecnologia</Navbar.Brand>
+    <Navbar.Brand href="/">Tecnologia para Todos</Navbar.Brand>
     <img src="/src/assets/logotech1.png" 
     width="200"
     height="80"

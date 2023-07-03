@@ -18,15 +18,17 @@ function Home() {
       </Carousel.Caption>
     </Carousel.Item>
     <Carousel.Item>
+     
       <img
-        className="d-block w-100"
+        className=" w-100 d-block "
         src="https://segredosdomundo.r7.com/wp-content/uploads/2020/09/alexa-o-que-ou-quem-e-como-funciona-essa-tecnologia.jpeg"
         alt="Second slide"
         height="600px"
+        
        
         
       />
-
+      
       <Carousel.Caption>
         <h3>Alexa de Amazon</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>

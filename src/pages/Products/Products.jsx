@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap"
-import ProductCard from "../../componentes/ProductCard/ProductCard"
+import ProductCard from "../../componentes/ProductCard/ProductCard.jsx"
 
 export const Products = ()=>{
   const products =[{

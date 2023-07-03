@@ -7,6 +7,7 @@ import Home from "./pages/Home/Home.jsx";
 import Product from './pages/Product/Product.jsx'
 import Products from './pages/Products/Products.jsx'
 import Profile from './pages/Profile/Profile.jsx'
+import UserState from './contexts/users/UserState.jsx' ;
 
 function App() {
  
@@ -14,6 +15,7 @@ function App() {
   return (
     
       <div className='App'>
+        <UserState>
         <BrowserRouter>
         <Header></Header>
         <Routes>
@@ -23,7 +25,7 @@ function App() {
           ></Route>
           <Route path='/products' element={ <Products></Products>}
           ></Route>
-          <Route path='/produtcs/:id' element={ <Product></Product>}
+          <Route path='/products/:productId' element={ <Product></Product>}
           ></Route>
           <Route path='/auth/login' element={ <Login></Login>}
           ></Route>
@@ -33,7 +35,7 @@ function App() {
           ></Route>
         </Routes>
         </BrowserRouter>
-
+        </UserState>
         
       </div>
       
