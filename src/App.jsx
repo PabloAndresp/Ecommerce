@@ -7,7 +7,7 @@ import Home from "./pages/Home/Home.jsx";
 import Product from './pages/Product/Product.jsx'
 import Products from './pages/Products/Products.jsx'
 import Profile from './pages/Profile/Profile.jsx'
-import UserState from './contexts/users/UserState.jsx' ;
+import UserState from './Contexts/users/UserState.jsx' ;
 
 function App() {
  
