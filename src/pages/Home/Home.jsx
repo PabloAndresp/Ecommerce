@@ -1,16 +1,34 @@
-import React from 'react'
+import {Children, useContext, useEffect} from 'react'
 import Carousel from 'react-bootstrap/Carousel';
+import UserContext from '../../Contexts/users/UserContext.jsx';
+import {Container, Spinner,Col,Image, Row} from 'react-bootstrap'
 
+
+import './Home.css'
+import { Navigate } from 'react-router-dom';
 
 function Home() {
+
+  const userCtx = useContext( UserContext )
+  const { user, verifyingToken, authStatus } = userCtx
+  
+
+ 
+
+
+
   return (
+
+    <Container>
+      <h1>{ `Bienvenido ${ user?.fullName || "" }` }</h1>
     <Carousel>
     <Carousel.Item>
       <img
-        className="d-block w-100"
+        className="s w-100"
         src="https://static.wixstatic.com/media/ab5875_f032065290e14564ae566e1a0e8a3719~mv2.png/v1/fit/w_1000%2Ch_1000%2Cal_c/file.png"
         alt="First slide"
-        height="600px"
+        height="400px"
+        width= "200px"
       />
       <Carousel.Caption>
         <h3>Smartwatchs  </h3>
@@ -18,12 +36,13 @@ function Home() {
       </Carousel.Caption>
     </Carousel.Item>
     <Carousel.Item>
-     
+    
       <img
-        className=" w-100 d-block "
+        className=" d-block w-100"
         src="https://segredosdomundo.r7.com/wp-content/uploads/2020/09/alexa-o-que-ou-quem-e-como-funciona-essa-tecnologia.jpeg"
         alt="Second slide"
-        height="600px"
+        height="400px"
+        width="200px"
         
        
         
@@ -39,7 +58,8 @@ function Home() {
         className="d-block w-100"
         src="https://mondrian.mashable.com/2016%252F03%252F21%252F89%252Fipdcompr098.1811a.jpg%252F950x534__filters%253Aquality%252880%2529.jpg"
         alt="Third slide"
-        height="600px"
+        height="400px"
+        width="200px"
       />
 
       <Carousel.Caption>
@@ -50,7 +70,25 @@ function Home() {
       </Carousel.Caption>
     </Carousel.Item>
   </Carousel>
+
+  <Container>
+<Row>
+  <Col xs={6} md={4}>
+    <Image src="holder.js/500x500" roundedCircle />
+  </Col>
+  <Col xs={6} md={4}>
+    <Image src="holder.js/500x500" roundedCircle />
+  </Col>
+  <Col xs={6} md={4}>
+    <Image src="holder.js/500x500"  roundedCircle/>
+  </Col>
+</Row>
+</Container>
+
+  </Container>
+
+
   )
 }
 
-export default Home;
+export default Home

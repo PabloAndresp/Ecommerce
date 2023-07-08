@@ -1,9 +1,15 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-
+import  {useContext}  from 'react'
+import UserContext from '../../Contexts/users/UserContext.jsx'
+import { NavDropdown} from 'react-bootstrap'
 
 export const Header =()=> {
+
+  const userCtx = useContext( UserContext )
+  const { logout, user } = userCtx
+
   return (
     <Navbar bg = "dark" expand="lg" variant= 'dark'>
       <Container fluid>
@@ -21,11 +27,27 @@ export const Header =()=> {
       >
         <Nav.Link href="/home">Home</Nav.Link>
         <Nav.Link href="/products">Productos</Nav.Link>
+         
+        {
+              user?.email ? <> 
+              <NavDropdown title="Sesion" id="collasible-nav-dropdown">
+                  <NavDropdown.Item href="/profile">Mi perfil</NavDropdown.Item>
+                  <NavDropdown.Item href="/" onClick={ () => logout() }>
+                    Cerrar Sesión
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </> : <>
+
+
+
         <Nav.Link href="/auth/login">Ingreso</Nav.Link>
         
         <Nav.Link href="/auth/signup">
           Registro
         </Nav.Link>
+
+      </>
+       } 
       </Nav>
      
     </Navbar.Collapse>
@@ -34,4 +56,3 @@ export const Header =()=> {
   )
 }
 
-export default Header
