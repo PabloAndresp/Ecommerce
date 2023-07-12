@@ -12,15 +12,25 @@ import ShoppingCartState from './Contexts/ShoppingCart/ShoppingCartState.jsx'
 import PrivateRoute from './componentes/PrivateRoute/PrivateRoute.jsx'
 import PublicRoute from './componentes/PublicRoute/PublicRoute.jsx'
 import AuthRoute from './componentes/AuthRoute/AuthRoute.jsx'
+import PayPalCheckout from './pages/PayPalCheckout/PayPalCheckout.jsx'
+import {PayPalScriptProvider} from '@paypal/react-paypal-js'
 
 function App() {
- 
 
+
+
+            
   return (
     
-      <div className='App'>
-        <UserState>
-        <ShoppingCartState>
+    <div className='App'>
+      <UserState>
+      <ShoppingCartState>
+      <PayPalScriptProvider options={ {
+          clientId: "ATR6qk2ovJPvRYr9Ocrma21ui19OAeO3i7MOYDz9bkU1nQZU5bVilfzymIG2y3-BBWbr4N909u8-krnB",
+          
+            components: "buttons",
+            currency: "USD"
+          } }>
         <BrowserRouter>
         <Header></Header>
         <Routes>
@@ -44,7 +54,15 @@ function App() {
                   <Product></Product>
                 </PublicRoute>
               }>
-              </Route>
+                </Route>
+                <Route path='/checkout' element={
+                  <PublicRoute>
+                    <PayPalCheckout></PayPalCheckout>
+                  </PublicRoute>
+                }></Route>
+
+                
+              
               <Route path='/auth/login' element={
                 <AuthRoute>
                   <Login></Login>
@@ -67,6 +85,7 @@ function App() {
               </Route>
             </Routes>
         </BrowserRouter>
+        </PayPalScriptProvider>
         </ShoppingCartState>
         </UserState>
         

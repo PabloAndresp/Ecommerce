@@ -1,13 +1,16 @@
-import { useReducer } from 'react'
+
 import ShoppingCartContext from './ShoppingCartContext.jsx'
-import ShoppingCartReducer from './ShoppingCartReducer.jsx'
+import { useShoppingCartReducer } from './ShoppingCartReducer.jsx'
+
+
 
 const ShoppingCartState = ( props ) => {
   const initialState = {
     products: null
   }
 
-  const [ globalState, dispatch ] = useReducer( ShoppingCartReducer, initialState )
+  const [ globalState, dispatch ] = useShoppingCartReducer( initialState )
+
 
   const addProduct = ( product ) => {
     dispatch( {
@@ -39,7 +42,8 @@ const ShoppingCartState = ( props ) => {
       addProduct,
       removeProduct,
       getProducts
-    } }>
+    } }displayName="ShoppingCartContext">
+    
 
       { props.children }
     </ShoppingCartContext.Provider>

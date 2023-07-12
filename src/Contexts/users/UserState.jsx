@@ -6,7 +6,7 @@ import userReducers from './UserReducers.jsx';
 const UserState = (props) =>{
     const initialState = {
         user: {
-            id: null,
+            _id: null,
             fullName: null,
             email: null
         },
@@ -77,7 +77,7 @@ const UserState = (props) =>{
             loginUser,
             verifyingToken,
             logout
-          } }>
+          } }displayName="UserContext">
             { props.children }
           </UserContext.Provider>
     )

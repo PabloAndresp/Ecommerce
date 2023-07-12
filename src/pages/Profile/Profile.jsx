@@ -10,7 +10,7 @@ function Profile () {
     <div className='signup template d-flex justify-content-center align-items-center  vh-100 bg-primary'>
       <div className='form_container p-5 rounded bg-white'>
         <form>
-        <h3 className='text-center' >Perfil</h3>
+        <h3 className='text-center' >Mi Perfil</h3>
         <div className='links'>
         <a href="#">< img src= "/src/assets/perfil.png" alt=""></img></a>
         </div>

@@ -1,8 +1,10 @@
 import {Children, useContext, useEffect} from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import UserContext from '../../Contexts/users/UserContext.jsx';
-import {Container, Spinner,Col,Image, Row} from 'react-bootstrap'
-
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+import Row from 'react-bootstrap/Row';
 
 import './Home.css'
 import { Navigate } from 'react-router-dom';
@@ -20,6 +22,7 @@ function Home() {
   return (
 
     <Container>
+      <Container>
       <h1>{ `Bienvenido ${ user?.fullName || "" }` }</h1>
     <Carousel>
     <Carousel.Item>
@@ -70,21 +73,22 @@ function Home() {
       </Carousel.Caption>
     </Carousel.Item>
   </Carousel>
-
-  <Container>
+  </Container>
+<section>
+  <Container fluid>
 <Row>
-  <Col xs={6} md={4}>
+  <Col xs={6} md={6}>
     <Image src="holder.js/500x500" roundedCircle />
   </Col>
-  <Col xs={6} md={4}>
+  <Col xs={6} md={6}>
     <Image src="holder.js/500x500" roundedCircle />
   </Col>
-  <Col xs={6} md={4}>
+  <Col xs={6} md={6}>
     <Image src="holder.js/500x500"  roundedCircle/>
   </Col>
 </Row>
 </Container>
-
+</section>
   </Container>
 
 
