@@ -83,13 +83,13 @@ useEffect( () => {
     <Container fluid>
       <Row>
         <Col>
-        <h1>Catalogo de Productos de { user?.fullName || "invitado" }</h1>
+        <h1>Catalogo de Productos  { user?.fullName || "" }</h1>
         </Col>
       </Row>
       <Row>
       {products.map(product => {
         return <Col key={ product._id }>
-        <ProductCard product={product} productViewPath={`/products/${product.id}`}></ProductCard>
+        <ProductCard product={product} productViewPath={`/products/${product._id}`}></ProductCard>
         </Col>
       })
     }

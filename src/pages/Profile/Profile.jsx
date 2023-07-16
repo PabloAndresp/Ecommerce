@@ -15,22 +15,18 @@ function Profile () {
         <a href="#">< img src= "/src/assets/perfil.png" alt=""></img></a>
         </div>
         <div className='mb-2'>
-          <label htmlFor="id">id</label>
-          <input id= { user._id } name='name'type="text"  placeholder="" className="form-control"/>
+          <label htmlFor="id"></label>
+          <p>Id= { user._id } </p>
         </div>
         <div className='mb-2'>
-          <label htmlFor="nombre completo">Nombre Completo</label>
-          <input id='nombre completo' name={ user.fullName }type="text"  placeholder="" className="form-control"/>
+          <label htmlFor="nombre completo"></label>
+          <p> Nombre completo= { user.fullName }</p>
         </div>
         <div className='mb-2'>
-          <label htmlFor="Correo">Email</label>
-          <input id='email' name={ user.email }type="email"  placeholder="" className="form-control"/>
+          <label htmlFor="Correo"></label>
+          <p> Nombre completo= { user.email }</p>
         </div>
-        <div className='mb-2'>
-          <label htmlFor="password">Contraseña</label>
-          <input id='password' name='password'type="password"  placeholder="" className="form-control"/>
-
-        </div>
+       
         
           <div className='d-grid mt-2'>
           

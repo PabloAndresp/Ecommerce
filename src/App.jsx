@@ -14,6 +14,7 @@ import PublicRoute from './componentes/PublicRoute/PublicRoute.jsx'
 import AuthRoute from './componentes/AuthRoute/AuthRoute.jsx'
 import PayPalCheckout from './pages/PayPalCheckout/PayPalCheckout.jsx'
 import {PayPalScriptProvider} from '@paypal/react-paypal-js'
+import Footer from "./componentes/Footer/Footer.jsx"
 
 function App() {
 
@@ -83,7 +84,9 @@ function App() {
                 </PrivateRoute>
               }>
               </Route>
+              
             </Routes>
+            <Footer></Footer>
         </BrowserRouter>
         </PayPalScriptProvider>
         </ShoppingCartState>
