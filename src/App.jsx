@@ -1,12 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import {Header }from './componentes/Header/Header.jsx'
-import Login from './pages/Auth/Login/Login.jsx'
-import SignUp from './pages/Auth/Signup/Signup.jsx'
+import {Login} from './pages/Auth/Login/Login.jsx'
+import {SignUp} from './pages/Auth/Signup/Signup.jsx'
 import Home from "./pages/Home/Home.jsx";
 import Product from './pages/Product/Product.jsx'
 import Products from './pages/Products/Products.jsx'
-import Profile from './pages/Profile/Profile.jsx'
+import {Profile} from './pages/Profile/Profile.jsx'
 import UserState from './Contexts/users/UserState.jsx' ;
 import ShoppingCartState from './Contexts/ShoppingCart/ShoppingCartState.jsx'
 import PrivateRoute from './componentes/PrivateRoute/PrivateRoute.jsx'
