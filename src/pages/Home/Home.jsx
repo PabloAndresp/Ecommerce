@@ -79,7 +79,7 @@ function Home() {
           </Carousel.Item>
         </Carousel>
       </Container>
-
+      <h1>Productos en Oferta</h1>
       <ProductOfertas></ProductOfertas>
 
     </Container>

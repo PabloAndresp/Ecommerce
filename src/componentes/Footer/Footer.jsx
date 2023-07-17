@@ -1,6 +1,10 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import "../Footer/Footer.css"
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function Footer () {
   return (
@@ -29,17 +33,12 @@ function Footer () {
             </div>
             <div className="box-footer">
                 <h2>Redes sociales</h2>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
+                <a href="#"><InstagramIcon /></a>
+                <a href="#"><TwitterIcon /></a>
+                <a href="#"><FacebookIcon /></a>
+                <a href="#"><LinkedInIcon /></a>
             </div>
-            <div className="box-copyright">
-                
-                <p>Todos los derechos reservados © 2023
-                    <b>Bootcamp udd Pablo Pavez</b>
-                </p>
-            </div>
+            
             </div>
             
 
