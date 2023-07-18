@@ -26,9 +26,9 @@ export const Header =()=> {
     <Navbar bg = "dark" expand="lg" variant= 'dark'>
       <Container fluid>
     <Navbar.Brand href="/">Tecnologia para Todos</Navbar.Brand>
-    <img src="/src/assets/logotech1.png" 
-    width="200"
-    height="80"
+    <img src="/src/assets/logo2.jpg" 
+    width="180"
+    height="90"
     className='d-inline-block align-top'/>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll" style={{ flexGrow: 0}}>
