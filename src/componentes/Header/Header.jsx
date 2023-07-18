@@ -26,7 +26,7 @@ export const Header =()=> {
     <Navbar bg = "dark" expand="lg" variant= 'dark'>
       <Container fluid>
     <Navbar.Brand href="/">Tecnologia para Todos</Navbar.Brand>
-    <img src="/src/assets/logo2.jpg" 
+    <img src="/src/assets/logo2.png" 
     width="180"
     height="90"
     className='d-inline-block align-top'/>
